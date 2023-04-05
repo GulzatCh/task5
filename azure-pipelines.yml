@@ -1,0 +1,7 @@
+- task: AwsCli@1
+  displayName: 'Modify ELBv2 idle timeout'
+  inputs:
+    awsCredentials: 'aws'
+    regionName: 'us-east-1'
+    command: 'aws elbv2 modify-load-balancer-attributes --load-balancer-arn arn:aws:elasticloadbalancing:us-east-1:628205245099:loadbalancer/app/test/f31d312482f52528 --attributes Key=idle_timeout.timeout_seconds,Value=30'
+
